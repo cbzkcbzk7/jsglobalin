@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+         
+         // 문자열 선언 및 초기화
+         let url = "http://WWW.ITPAPER.CO.KR/index.jsp";
+         document.write("<h1>" + url + "</h1>");
+
+         
+         // 문자열의 길이
+         let strLength = url.length;
+         document.write("<h1> 문자열의 길이 -> " + strLength + "</h1>");
+
+         // 파라미터로 설정된 위치의 글자를 리턴
+         let str2nd = url.charAt(1); //  index
+         document.write("<h1> charAt(index) -> " + str2nd + "</h1>");
+         
+         // 파라미터로 전달된 글자가 처음 나타나는 위치
+         let position1 = url.indexOf('/');
+         document.write("<h1> indexOf(문자열) -> " + position1 + "</h1>");
+
+         let position2 = url.indexOf("/", position1+1);
+         document.write("<h1> indexOf(문자열,index) -> " + position2 + "</h1>");
+
+         let position3 = url.lastIndexOf("/");
+         document.write("<h1> lastIndexOf(문자열) -> " + position3 + "</h1>");
+
+         let substring1 = url.substring(0,5);
+         document.write("<h1> substring(시작index, 끝index) 시작 ~ 끝-1 -> " + substring1 + "</h1>");
+
+         let substring2 = url.substring(7);
+         document.write("<h1> substring(시작index) 시작 -> " + substring2 + "</h1>");
+
+         let up = url.toUpperCase();
+         document.write("<h1> toUpperCase() -> " + up + "</h1>");
+
+         let low = url.toLowerCase();
+         document.write("<h1> toLowerCase() -> " + low + "</h1>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

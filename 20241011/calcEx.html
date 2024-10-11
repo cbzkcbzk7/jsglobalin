@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+        let calc = {};
+
+        calc.x = 0;
+        calc.y = 0;
+
+        // 멤버 변수에 값을 변경시키기 위한 메소드
+        calc.setValue = function(x,y){
+            this.x = x;
+            this.y = y;
+        }
+
+        // 멤버 변수끼리 덧셈한 결과를 리턴하는 함수
+        calc.plus = function(){
+            return this.x + this.y;
+        }
+
+        // 멤버 변수끼리 뺄셈 결과를 리턴하는 함수
+        calc.minus = function(){
+            return this.x - this.y;
+        }
+
+        // 덧셈과 뺄셈의 결과를 출력하는 메서드
+        calc.result = function(){
+            let plusResult = this.plus();
+            let minusResult = this.minus();
+
+            document.write("<p> 덧셈의 결과는 " + plusResult + " 입니다. </p>");
+            document.write("<p> 뺄셈의 결과는 " + minusResult + " 입니다. </p>");
+        }
+
+        document.write("<h1> 계산기 </h1><hr>");
+        calc.setValue(200,100);
+        calc.result();
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
