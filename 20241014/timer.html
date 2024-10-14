@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function printTime(){
+            // 현재 시각을 구함
+            let days = ["일","월","화","수","목","금","토"];
+            let mydate = new Date();
+
+            let yy = mydate.getFullYear();
+            let mm = mydate.getMonth()+1;
+            let dd = mydate.getDate();
+            let i = mydate.getDay();
+            let day = days[i];
+            let hh = mydate.getHours();
+            let mi = mydate.getMinutes();
+            let ss = mydate.getSeconds();
+
+            // 현재 시각 완성
+            let result = yy + "-" + mm + "-" + dd + " " + day + "요일" + hh + ":" + mm + ":" + ss;
+
+            // 
+            document.getElementById("timer").innerHTML = result;
+        }
+
+        function startTimer(){
+            setInterval(printTime, 1000);
+        }
+
+    </script>
+</head>
+<body onload="startTimer();">
+    <h1 id="timer"></h1>    
+
+</body>
+</html>

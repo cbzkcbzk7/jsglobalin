@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+        let theday = new Date(2024,0,1);
+        let today = new Date();
+
+        let cnt = today.getTime() - theday.getTime();
+
+        document.write("<h2>" + cnt + "</h2>");
+
+        let day = Math.floor(cnt / (24 * 60 * 60 * 100));
+        document.write("<h2> 올해는 " + day + "일 지났습니다.</h2>");
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

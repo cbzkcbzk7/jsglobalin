@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+         // 요일의 이름을 저장하고 있는 배열의 생성
+         let days = ["일","월","화","수","목","금","토"];
+
+        // date 객체 생성
+        let mydate = new Date();
+        
+        let yy = mydate.getFullYear();
+
+        let mm = mydate.getMonth();
+
+        let dd = mydate.getDate();
+
+        let i = mydate.getDay();
+        let day = days[i];
+
+        // 시간
+        let hh = mydate.getHours();
+        let mi = mydate.getMinutes();
+        let ss = mydate.getSeconds();
+        document.write("<h2>"+hh+"시"+mi+"분"+ss+"초"+"</h2>");
+
+        // 2024 10월 15일
+        mydate.setFullYear(2024);
+        mydate.setMonth(9);
+        mydate.setDate(15);
+        mydate.setHours(16);
+        mydate.setMinutes(56);
+        mydate.setSeconds(20);
+
+        let yyyy = mydate.getFullYear();
+
+        document.write("<h2>"+mydate+"</h2>");
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
