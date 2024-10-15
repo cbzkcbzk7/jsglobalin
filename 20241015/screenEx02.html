@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+        function getCenterPixcel(){
+            let center = new Array(
+                parseInt(screen.availHeight/2),
+                parseInt(screen.availWidth/2)
+            );
+
+            return center;
+        }
+
+        let screenCenter = getCenterPixcel();
+
+        document.write("<h1> 화면의 중심좌표 : x=" + screenCenter[0] +
+                    ", y =" + screenCenter[1] + "</h1>");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
