@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        // 게시판 데이터 표현
+        let bbs = {
+            "title"       : "JavaScript + JQUERY 의 완벽 강의 !!"
+        ,   "description" : "글로벌인 일본IT 개발자 과정에서 진행중인 Javascript 강의 학생용 자료입니다."
+                            + "각 게시판의 다운로드 권한 매강의 어쩌구저쩌구"
+
+        ,   "total"       : 4
+        ,   "item"        : [
+
+                    {
+                    "no"        : "공지"
+                    , "subject" : "'Javascript + JQuery완벽 강의 강의 자료실입니다.'"
+                    , "hit"     : 3
+                    , "date"    : "2023.09.20"
+                    }
+                    
+                    ,{
+                     "no"       : "공지"
+                    , "subject" : "'Javascript + JQuery완벽 강의 3일차 강의 자료실입니다.'"
+                    , "hit"     : 6
+                    , "date"    : "2023.10.01"
+                    }
+
+                    ,{
+                     "no"       : "공지"
+                    , "subject" : "'Javascript + JQuery완벽 강의 6일차 강의 자료실입니다.'"
+                    , "hit"     : 15
+                    , "date"    : "2024.01.18"
+                    }
+
+                    ,{
+                     "no"       : "공지"
+                    , "subject" : "'Javascript + JQuery완벽 강의 9일차 강의 자료실입니다.'"
+                    , "hit"     : 31
+                    , "date"    : "2024.02.15"
+                    }
+                ]    
+        };
+
+        // bbs에 독립된 값들에 대한 출력
+        let html = "<h1>" + bbs.title + "</h1>";
+            html += "<p>" + bbs.description + "</p>";
+            html += "<p> 총 게시물 수 : " + bbs.total + "</p>";
+            html += "<ul>";
+
+            
+            for(let i = 0; i < bbs.item.length; ++i){
+                let li = bbs.item[i];
+                html += "<li>(" + li.no + ") ";
+                html +=   li.subject;
+                html += "( 조회수 : " + li.hit + " /  날짜 : " + li.date + ")";   
+            }
+
+            html += "</ul>";
+        
+            document.write(html);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
